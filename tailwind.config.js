@@ -7,9 +7,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#1db954",
+        primary: "#1ed760",
         background: "#121212",
       },
+    },
+    fontFamily: {
+      montserrat: ["var(--font-montserrat)"],
     },
   },
   plugins: [],
