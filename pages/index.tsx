@@ -1,4 +1,5 @@
 import Banner from "components/Banner";
+import FeaturedList from "components/FeaturedList";
 import Head from "next/head";
 
 const Landing = () => {
@@ -11,6 +12,7 @@ const Landing = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner />
+      <FeaturedList />
     </>
   );
 };
