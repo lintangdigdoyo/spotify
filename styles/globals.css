@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply font-montserrat bg-background;
+    @apply font-montserrat bg-background text-white;
   }
 }
