@@ -1,8 +1,8 @@
 import axios from "axios";
-import { Token } from "services/types";
+import { TokenRes } from "services/types";
 
 const getToken = async () => {
-  const res = await axios.get<Token>(`/api/token`);
+  const res = await axios.get<TokenRes>(`/api/token`);
   return res.data;
 };
 

@@ -10,7 +10,7 @@ const handler: NextApiHandler = async (req, res) => {
     }
 
     const response = await axios.post(
-      `${process.env.SPOTIFY_API_URL}/token`,
+      `${process.env.SPOTIFY_ACCOUNT_API_URL}/token`,
       qs.stringify({
         client_id: process.env.CLIENT_ID,
         client_secret: process.env.CLIENT_SECRET,

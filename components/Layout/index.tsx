@@ -1,5 +1,5 @@
 import Navbar from "components/Navbar";
-import useGetToken from "services/hooks/useGetToken";
+import { useGetToken } from "services/hooks";
 
 interface LayoutProps {
   children: React.ReactNode;
