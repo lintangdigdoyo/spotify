@@ -1,6 +1,9 @@
+import Head from "next/head";
+
 import Banner from "components/Banner";
 import FeaturedList from "components/FeaturedList";
-import Head from "next/head";
+import Typography from "components/Common/Typography";
+import Button from "components/Common/Button";
 
 const Landing = () => {
   return (
@@ -11,7 +14,27 @@ const Landing = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Banner />
+      <Banner imgUrl="/images/banner.jpg">
+        <Banner.Content>
+          <Typography type="h1" variant="heading1" bold="medium">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </Typography>
+        </Banner.Content>
+        <Banner.Content>
+          <Typography
+            type="p"
+            variant="paragraph2"
+            bold="semi"
+            className="px-40"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cum
+            consequatur adipisci, eligendi magni praesentium ullam
+          </Typography>
+        </Banner.Content>
+        <Banner.Content>
+          <Button>Try Now</Button>
+        </Banner.Content>
+      </Banner>
       <FeaturedList />
     </>
   );

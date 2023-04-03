@@ -1,7 +1,7 @@
 import { createElement } from "react";
-import classNames from "classnames";
 
 import { BoldType, TypographyType, TypographyVariantType } from "./types";
+import cnMerge from "utils/cnMerge";
 
 interface TypographyProps
   extends React.HTMLAttributes<
@@ -21,13 +21,13 @@ const CLASS_STYLES = {
   paragraph2: "text-base",
   paragraph3: "text-sm",
   caption: "text-xs",
-};
+} as const;
 
 const BOLD_STYLES = {
-  semi: "!font-semibold",
-  medium: "!font-bold",
-  extra: "!font-extrabold",
-};
+  semi: "font-semibold",
+  medium: "font-bold",
+  extra: "font-extrabold",
+} as const;
 
 const Typography = ({
   type = "p",
@@ -40,7 +40,7 @@ const Typography = ({
   const element = createElement(
     type,
     {
-      className: classNames(
+      className: cnMerge(
         CLASS_STYLES[variant],
         bold && BOLD_STYLES[bold],
         className
