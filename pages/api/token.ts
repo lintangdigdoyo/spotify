@@ -24,8 +24,8 @@ const handler: NextApiHandler = async (req, res) => {
     );
 
     res.status(200).json(response.data);
-  } catch (err) {
-    res.status(400);
+  } catch (err: any) {
+    res.status(err.status).json(err.message);
   }
 };
 

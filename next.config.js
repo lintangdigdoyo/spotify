@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: ["i.scdn.co"],
+  },
   env: {
     SPOTIFY_ACCOUNT_API_URL: process.env.SPOTIFY_ACCOUNT_API_URL || "",
     SPOTIFY_API_URL: process.env.SPOTIFY_API_URL || "",

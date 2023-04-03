@@ -11,14 +11,14 @@ const Navbar = () => {
   return (
     <header
       className={classNames(
-        "w-full h-20 px-10 fixed top-0 z-30 transition-colors duration-300",
+        "fixed top-0 z-30 h-20 w-full px-10 transition-colors duration-300",
         {
-          ["bg-background"]: !isPositionOnTop,
+          ["bg-background-main"]: !isPositionOnTop,
         }
       )}
     >
       <nav className="h-full">
-        <ul className="flex items-center h-full">
+        <ul className="flex h-full items-center">
           <li>
             <Link aria-label="spotify logo" href="/">
               <SpotifyIcon />

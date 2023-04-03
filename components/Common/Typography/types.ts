@@ -8,12 +8,4 @@ export type TypographyType =
   | "p"
   | "span";
 
-export type TypographyVariantType =
-  | "heading1"
-  | "heading2"
-  | "paragraph1"
-  | "paragraph2"
-  | "paragraph3"
-  | "caption";
-
 export type BoldType = "semi" | "medium" | "extra";

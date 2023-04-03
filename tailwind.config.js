@@ -7,8 +7,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#2ebd59",
-        background: "#121212",
+        primary: {
+          main: "#2ebd59",
+        },
+        background: {
+          light: "#272727",
+          main: "#121212",
+        },
       },
     },
     fontFamily: {
@@ -32,5 +37,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };
