@@ -19,7 +19,8 @@ const Button = ({ className, children, ...restProps }: ButtonProps) => {
         "after:transition-all after:duration-300 after:content-['']",
         /** before */
         "before:absolute before:inset-x-0 before:inset-y-0 before:-z-[1]",
-        "before:-translate-x-full before:border-y-[20px] before:border-r-[20px] before:border-primary-main before:border-r-transparent",
+        "before:-translate-x-full",
+        "before:border-y-[20px] before:border-r-[20px] before:border-primary-main before:border-r-transparent",
         "before:transition-all before:duration-300 before:content-['']",
         /** hover */
         "hover:text-white hover:before:-translate-x-[30%] hover:after:translate-x-[30%]",
