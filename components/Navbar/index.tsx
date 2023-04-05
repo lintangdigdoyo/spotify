@@ -1,8 +1,9 @@
-import Link from "next/link";
 import classNames from "classnames";
+import Link from "next/link";
+
+import { useScrollPosition } from "utils/hooks/useScrollPosition";
 
 import SpotifyIcon from "assets/svg/SpotifyIcon";
-import { useScrollPosition } from "utils/hooks/useScrollPosition";
 
 const Navbar = () => {
   const position = useScrollPosition();

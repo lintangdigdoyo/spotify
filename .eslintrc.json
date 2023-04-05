@@ -1,3 +1,60 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "unused-imports", "simple-import-sort"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "no-console": "warn",
+
+    // unused-imports
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    // import sort
+    "simple-import-sort/exports": "warn",
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          // external lib & side effect imports
+          ["^@?\\w", "^\\u0000"],
+          // styles imports
+          ["^.+\\.s?css$", "^styles"],
+          // services & utils imports
+          ["^services", "^utils"],
+          // components & assets imports
+          ["^components", "^assets"],
+          // relative paths up until 3 level
+          [
+            "^\\./?$",
+            "^\\.(?!/?$)",
+            "^\\.\\./?$",
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./\\.\\./?$",
+            "^\\.\\./\\.\\.(?!/?$)",
+            "^\\.\\./\\.\\./\\.\\./?$",
+            "^\\.\\./\\.\\./\\.\\.(?!/?$)"
+          ],
+          // anything not matched in another group
+          ["^"]
+        ]
+      }
+    ]
+  }
 }
