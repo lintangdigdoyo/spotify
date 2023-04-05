@@ -44,7 +44,7 @@ const Banner = ({ imgUrl, children }: BannerProps) => {
     >
       <motion.div
         style={{ scale }}
-        className="z-10 flex flex-col items-center justify-center gap-6 text-center lg:mx-80"
+        className="z-10 mx-10 flex flex-col items-center justify-center gap-6 text-center lg:mx-80"
         initial="hidden"
         animate="visible"
         transition={{

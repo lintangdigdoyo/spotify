@@ -7,7 +7,7 @@ interface SectionProps {
 
 const Section = ({ title, children }: SectionProps) => {
   return (
-    <div className={"my-12"}>
+    <div className="my-12">
       <Typography
         type="h3"
         variant="paragraph1"

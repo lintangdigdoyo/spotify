@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Banner from "components/Banner";
+import TextSection from "components/Common/TextSection";
 import FeaturedList from "components/FeaturedList";
 
 const Landing = () => {
@@ -23,7 +24,13 @@ const Landing = () => {
         </Banner.Description>
         <Banner.Button>Try Now</Banner.Button>
       </Banner>
+      <TextSection>
+        Lorem ipsum dolor <span className="text-primary-main">sit amet</span>
+      </TextSection>
       <FeaturedList />
+      <TextSection>
+        <span className="text-primary-main">Lorem ipsum</span> dolor sit amet
+      </TextSection>
     </>
   );
 };
