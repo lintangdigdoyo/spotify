@@ -7,7 +7,7 @@ interface CardTitleProps {
 const CardTitle = ({ children }: CardTitleProps) => {
   return (
     <Typography
-      type="h3"
+      type="h4"
       variant="paragraph3"
       bold="semi"
       className="mb-1 capitalize"

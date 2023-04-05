@@ -1,5 +1,6 @@
-import { motion, Variants } from "framer-motion";
+import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import Image from "next/image";
+import { useRef } from "react";
 
 import BannerButton from "./BannerButton";
 import BannerDescription from "./BannerDescription";
@@ -26,9 +27,23 @@ interface BannerProps {
 }
 
 const Banner = ({ imgUrl, children }: BannerProps) => {
+  const bannerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: bannerRef,
+    offset: ["end end", "end start"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9]);
+
   return (
-    <div className="relative left-0 top-0 flex h-screen w-full flex-col justify-center">
+    <motion.div
+      ref={bannerRef}
+      style={{ opacity }}
+      className="relative left-0 top-0 flex h-screen w-full flex-col justify-center"
+    >
       <motion.div
+        style={{ scale }}
         className="z-10 flex flex-col items-center justify-center gap-6 text-center lg:mx-80"
         initial="hidden"
         animate="visible"
@@ -46,7 +61,7 @@ const Banner = ({ imgUrl, children }: BannerProps) => {
         fill
         priority
       />
-    </div>
+    </motion.div>
   );
 };
 

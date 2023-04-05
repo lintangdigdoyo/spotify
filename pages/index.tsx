@@ -14,7 +14,8 @@ const Landing = () => {
       </Head>
       <Banner imgUrl="/images/banner.jpg">
         <Banner.Title>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <span className="text-primary-main">Spotify</span> dolor sit amet,
+          consectetur adipisicing elit.
         </Banner.Title>
         <Banner.Description>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cum

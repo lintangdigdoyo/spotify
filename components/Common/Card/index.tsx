@@ -18,7 +18,7 @@ const Card = ({ href, imgUrl, imgAlt, children }: CardProps) => {
       target="_blank"
       rel="noopener noreferrer"
       className={classNames(
-        "w-[190px] min-w-[190px] cursor-pointer rounded bg-background-light/50 p-[14px] transition-colors",
+        "w-[2050px] min-w-[250px] cursor-pointer rounded bg-background-light/50 p-[14px] transition-colors",
         "first:ml-10 last:mr-10",
         "hover:bg-background-light"
       )}
@@ -26,8 +26,8 @@ const Card = ({ href, imgUrl, imgAlt, children }: CardProps) => {
       <Image
         src={imgUrl}
         className="mx-auto mb-4 rounded object-cover"
-        width={165}
-        height={165}
+        width={215}
+        height={215}
         alt={imgAlt}
       />
       {children}
