@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 
-import { itemVariants } from ".";
 import Typography from "components/Common/Typography";
+
+import { itemVariants } from ".";
 
 interface BannerDescriptionProps {
   children: React.ReactNode;

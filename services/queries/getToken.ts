@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import { TokenRes } from "services/types";
 
 const getToken = async () => {

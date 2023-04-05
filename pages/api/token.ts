@@ -1,11 +1,11 @@
-import type { NextApiHandler } from "next";
 import axios from "axios";
+import type { NextApiHandler } from "next";
 import qs from "qs";
 
 const handler: NextApiHandler = async (req, res) => {
   try {
     if (req.method !== "GET") {
-      res.status(405);
+      res.status(405).json({ message: "Method Not Allowed" });
       return;
     }
 
@@ -24,8 +24,10 @@ const handler: NextApiHandler = async (req, res) => {
     );
 
     res.status(200).json(response.data);
-  } catch (err: any) {
-    res.status(err.status).json(err.message);
+  } catch (err) {
+    if (err instanceof Error) {
+      res.status(400).json(err.message);
+    }
   }
 };
 

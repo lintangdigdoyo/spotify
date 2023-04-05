@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 
-import { itemVariants } from ".";
 import Button from "components/Common/Button";
+
+import { itemVariants } from ".";
 
 interface BannerButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {

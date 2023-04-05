@@ -1,7 +1,8 @@
 import { createElement } from "react";
 
-import { BoldType, TypographyType } from "./types";
 import cnMerge from "utils/cnMerge";
+
+import { BoldType, TypographyType } from "./types";
 
 const CLASS_STYLES = {
   heading1: "text-6xl font-semibold",

@@ -1,8 +1,8 @@
 import classNames from "classnames";
-
-import CardTitle from "./CardTitle";
-import CardDescription from "./CardDescription";
 import Image from "next/image";
+
+import CardDescription from "./CardDescription";
+import CardTitle from "./CardTitle";
 
 interface CardProps {
   href: string;

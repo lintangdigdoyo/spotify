@@ -1,7 +1,7 @@
-import { UseQueryOptions, useQuery } from "@tanstack/react-query";
+import { useQuery, UseQueryOptions } from "@tanstack/react-query";
 
 import { getFeaturedPlaylists } from "services/queries";
-import { PlaylistsRes, PlaylistsParams, QueryKeyEnum } from "services/types";
+import { PlaylistsParams, PlaylistsRes, QueryKeyEnum } from "services/types";
 
 const useGetFeaturedPlaylists = (
   params?: PlaylistsParams,

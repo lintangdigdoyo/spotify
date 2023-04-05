@@ -1,9 +1,9 @@
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
-import { Variants, motion } from "framer-motion";
 
+import BannerButton from "./BannerButton";
 import BannerDescription from "./BannerDescription";
 import BannerTitle from "./BannerTitle";
-import BannerButton from "./BannerButton";
 
 export const itemVariants: Variants = {
   hidden: {

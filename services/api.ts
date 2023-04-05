@@ -1,5 +1,9 @@
 import axios from "axios";
 
+export type UninterceptedApiError = {
+  message: string | Record<string, string[]>;
+};
+
 const api = axios.create({
   baseURL: process.env.SPOTIFY_API_URL,
   headers: {
