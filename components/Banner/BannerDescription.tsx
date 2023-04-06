@@ -11,7 +11,12 @@ interface BannerDescriptionProps {
 const BannerDescription = ({ children }: BannerDescriptionProps) => {
   return (
     <motion.div variants={itemVariants}>
-      <Typography type="p" variant="paragraph2" bold="semi" className="px-20">
+      <Typography
+        type="p"
+        variant="paragraph2"
+        bold="semi"
+        className="md:px-20"
+      >
         {children}
       </Typography>
     </motion.div>

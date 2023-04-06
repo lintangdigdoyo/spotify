@@ -26,6 +26,7 @@ const Section = ({ title, children }: SectionProps) => {
         initial="hidden"
         whileInView="visible"
         variants={featureVariant}
+        className="mx-10"
       >
         <Typography
           type="h2"

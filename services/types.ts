@@ -1,6 +1,7 @@
 export enum QueryKeyEnum {
   TOKEN = "TOKEN",
   FEATURED_PLAYLISTS = "FEATURED_PLAYLISTS",
+  GENRES = "GENRES",
 }
 
 export interface TokenRes {
@@ -12,6 +13,10 @@ export interface TokenRes {
 export interface PlaylistsRes {
   message: string;
   playlists: Playlists;
+}
+
+export interface GenresRes {
+  genres: string[];
 }
 
 export interface PlaylistsParams {

@@ -3,6 +3,7 @@ import Head from "next/head";
 import Banner from "components/Banner";
 import TextSection from "components/Common/TextSection";
 import FeaturedList from "components/FeaturedList";
+import GenreList from "components/GenreList";
 
 const Landing = () => {
   return (
@@ -28,6 +29,7 @@ const Landing = () => {
         Lorem ipsum dolor <span className="text-primary-main">sit amet</span>
       </TextSection>
       <FeaturedList />
+      <GenreList />
     </>
   );
 };

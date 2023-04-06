@@ -17,7 +17,11 @@ const FeaturedList = () => {
     offset: ["start start", "end start"],
   });
 
-  const scrollX = useTransform(scrollYProgress, [0, 1], ["120%", "-200%"]);
+  const scrollHorizontal = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["120%", "-200%"]
+  );
   const opacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
@@ -40,7 +44,7 @@ const FeaturedList = () => {
               {data?.message}
             </Typography>
             <motion.div
-              style={{ x: scrollX }}
+              style={{ x: scrollHorizontal }}
               className="flex select-none gap-8"
             >
               {data?.playlists.items.map((item) => (
