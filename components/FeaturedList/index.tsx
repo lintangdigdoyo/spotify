@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform, Variants } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 import { useGetFeaturedPlaylists } from "services/hooks";
@@ -6,18 +6,6 @@ import { useGetFeaturedPlaylists } from "services/hooks";
 import Card from "components/Common/Card";
 import Section from "components/Common/Section";
 import Typography from "components/Common/Typography";
-
-const featureVariant: Variants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1.5,
-    },
-  },
-};
 
 const FeaturedList = () => {
   const featureRef = useRef<HTMLDivElement>(null);
@@ -35,22 +23,22 @@ const FeaturedList = () => {
   return (
     <div ref={featureRef} className="mt-[50vh] h-[500vh]">
       <div className="sticky left-0 top-20 overflow-hidden">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          variants={featureVariant}
+        <Section
+          title={
+            <>
+              <span className="text-primary-main">Featured</span> Playlists.
+            </>
+          }
         >
-          <Typography
-            type="h2"
-            variant="heading3"
-            className="text-center"
-            bold="medium"
-          >
-            <span className="text-primary-main">Featured</span> Playlists.
-          </Typography>
-        </motion.div>
-        <motion.div style={{ opacity }}>
-          <Section title={data?.message ?? "Playlists"}>
+          <motion.div style={{ opacity }}>
+            <Typography
+              type="h3"
+              variant="paragraph1"
+              className="mx-10 mb-4 capitalize"
+              bold="semi"
+            >
+              {data?.message}
+            </Typography>
             <motion.div
               style={{ x: scrollX }}
               className="flex select-none gap-8"
@@ -67,8 +55,8 @@ const FeaturedList = () => {
                 </Card>
               ))}
             </motion.div>
-          </Section>
-        </motion.div>
+          </motion.div>
+        </Section>
       </div>
     </div>
   );

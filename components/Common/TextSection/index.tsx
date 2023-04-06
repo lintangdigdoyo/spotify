@@ -1,6 +1,18 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 import Typography from "../Typography";
+
+const textSectionVariant: Variants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
 
 interface TextSectionProps {
   children: React.ReactNode;
@@ -9,9 +21,9 @@ interface TextSectionProps {
 const TextSection = ({ children }: TextSectionProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      initial="hidden"
+      whileInView="visible"
+      variants={textSectionVariant}
       className="my-[50vh]"
     >
       <Typography type="h2" variant="heading3" className="text-center">
