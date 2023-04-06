@@ -29,26 +29,20 @@ const GenreList = () => {
   const scrollVertical = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
 
   return (
-    <div ref={genreRef} className="mt-[50vh] h-[500vh]">
-      <div className="sticky left-0 top-20">
-        <Section
-          title={
-            <>
-              <span className="text-primary-main">Genre</span> of your choice.
-            </>
-          }
-        >
-          <div className="overflow-y-hidden">
-            <motion.div
-              style={{ y: scrollVertical }}
-              className="ml-[25%] h-[65vh]"
-            >
-              <List genres={data?.genres ?? []} activeIndex={currentIndex} />
-            </motion.div>
-          </div>
-        </Section>
+    <Section
+      innerRef={genreRef}
+      title={
+        <>
+          <span className="text-primary-main">Genre</span> of your choice.
+        </>
+      }
+    >
+      <div className="overflow-y-hidden">
+        <motion.div style={{ y: scrollVertical }} className="ml-[25%] h-[70vh]">
+          <List genres={data?.genres ?? []} activeIndex={currentIndex} />
+        </motion.div>
       </div>
-    </div>
+    </Section>
   );
 };
 
