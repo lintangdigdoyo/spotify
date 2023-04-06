@@ -24,7 +24,7 @@ const TextSection = ({ children }: TextSectionProps) => {
       initial="hidden"
       whileInView="visible"
       variants={textSectionVariant}
-      className="mx-10 my-[50vh]"
+      className="mx-10 mt-[50vh] h-[50vh]"
     >
       <Typography type="h2" variant="heading3" className="text-center">
         {children}
