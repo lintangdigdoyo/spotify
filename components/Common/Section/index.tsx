@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { motion, Variants } from "framer-motion";
 
 import Typography from "../Typography";
@@ -17,13 +18,28 @@ const featureVariant: Variants = {
 interface SectionProps {
   title: React.ReactNode;
   innerRef?: React.RefObject<HTMLDivElement>;
+  isSticky?: boolean;
   children: React.ReactNode;
 }
 
-const Section = ({ title, innerRef, children }: SectionProps) => {
+const Section = ({
+  title,
+  innerRef,
+  isSticky = true,
+  children,
+}: SectionProps) => {
   return (
-    <div ref={innerRef} className="mt-[50vh] h-[500vh]">
-      <div className="sticky left-0 top-20 overflow-hidden">
+    <div
+      ref={innerRef}
+      className={classNames({
+        ["mt-[50vh] h-[500vh]"]: isSticky,
+      })}
+    >
+      <div
+        className={classNames("left-0 top-20 overflow-hidden", {
+          ["sticky"]: isSticky,
+        })}
+      >
         <motion.div
           initial="hidden"
           whileInView="visible"

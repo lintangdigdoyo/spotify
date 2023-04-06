@@ -4,6 +4,7 @@ import Banner from "components/Banner";
 import TextSection from "components/Common/TextSection";
 import FeaturedList from "components/FeaturedList";
 import GenreList from "components/GenreList";
+import NewRelease from "components/NewRelease";
 
 const Landing = () => {
   return (
@@ -30,6 +31,7 @@ const Landing = () => {
       </TextSection>
       <FeaturedList />
       <GenreList />
+      <NewRelease />
     </>
   );
 };
