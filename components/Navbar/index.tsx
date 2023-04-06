@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <header
       className={classNames(
-        "fixed top-0 z-30 mx-10 h-20 w-full transition-colors duration-300",
+        "fixed top-0 z-30 h-20 w-full px-10 transition-colors duration-300",
         {
           ["bg-background-main"]: !isPositionOnTop,
         }
