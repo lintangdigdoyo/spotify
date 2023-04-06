@@ -8,12 +8,12 @@ import Section from "components/Common/Section";
 import Typography from "components/Common/Typography";
 
 const FeaturedList = () => {
-  const featureRef = useRef<HTMLDivElement>(null);
+  const featuredRef = useRef<HTMLDivElement>(null);
 
   const { data } = useGetFeaturedPlaylists({ limit: 10 });
 
   const { scrollYProgress } = useScroll({
-    target: featureRef,
+    target: featuredRef,
     offset: ["start start", "end start"],
   });
 
@@ -21,7 +21,7 @@ const FeaturedList = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div ref={featureRef} className="mt-[50vh] h-[500vh]">
+    <div ref={featuredRef} className="mt-[50vh] h-[500vh]">
       <div className="sticky left-0 top-20 overflow-hidden">
         <Section
           title={

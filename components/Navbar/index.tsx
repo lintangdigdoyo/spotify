@@ -1,13 +1,17 @@
 import classNames from "classnames";
+import { useMotionValueEvent, useScroll } from "framer-motion";
 import Link from "next/link";
-
-import { useScrollPosition } from "utils/hooks/useScrollPosition";
+import { useState } from "react";
 
 import SpotifyIcon from "assets/svg/SpotifyIcon";
 
 const Navbar = () => {
-  const position = useScrollPosition();
-  const isPositionOnTop = position === 0;
+  const [isPositionOnTop, setIsPositionOnTop] = useState(true);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsPositionOnTop(latest === 0);
+  });
 
   return (
     <header

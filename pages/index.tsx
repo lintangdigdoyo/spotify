@@ -28,9 +28,6 @@ const Landing = () => {
         Lorem ipsum dolor <span className="text-primary-main">sit amet</span>
       </TextSection>
       <FeaturedList />
-      <TextSection>
-        <span className="text-primary-main">Lorem ipsum</span> dolor sit amet
-      </TextSection>
     </>
   );
 };
