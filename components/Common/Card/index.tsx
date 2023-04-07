@@ -20,7 +20,6 @@ const Card = ({ href, imgUrl, imgAlt, children }: CardProps) => {
       className={classNames(
         "flex flex-col",
         "w-[250px] min-w-[250px] cursor-pointer rounded bg-background-light/50 p-[14px] transition-colors",
-        "first:ml-10 last:mr-10",
         "hover:bg-background-light"
       )}
     >
