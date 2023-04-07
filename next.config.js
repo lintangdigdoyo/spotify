@@ -1,5 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const withPWA = require("next-pwa")({
+  dest: "public",
+  register: true,
+  skipWaiting: false,
+  disable: process.env.NODE_ENV === "development",
+});
+
+module.exports = withPWA({
+  /** @type {import('next').NextConfig} */
   reactStrictMode: true,
   images: {
     domains: ["i.scdn.co"],
@@ -10,6 +17,4 @@ const nextConfig = {
     CLIENT_ID: process.env.CLIENT_ID || "",
     CLIENT_SECRET: process.env.CLIENT_SECRET || "",
   },
-};
-
-module.exports = nextConfig;
+});
