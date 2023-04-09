@@ -1,6 +1,6 @@
 import cnMerge from "utils/cnMerge";
 
-import { VariantType } from "./types";
+import type { VariantType } from "./types";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
