@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply font-montserrat;
+  }
   body {
-    @apply bg-background-main font-montserrat text-white;
+    @apply bg-background-main text-white;
   }
 }
 
