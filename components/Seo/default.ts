@@ -2,11 +2,11 @@ export const defaultMeta = {
   title: "Spotify",
   siteName: "Spotify",
   description: "Spotify landing page",
-  url: "http://localhost:3000",
+  url: "https://spotify-blond-xi.vercel.app",
   type: "website",
   robots: "follow, index",
   themeColor: "#121212",
-  image: "http://localhost:3000/meta/meta.jpg",
+  image: "https://spotify-blond-xi.vercel.app/meta/meta.jpg",
 };
 
 export const favicons: Array<React.ComponentPropsWithoutRef<"link">> = [
