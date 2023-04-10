@@ -22,7 +22,7 @@ const handler: NextApiHandler = async (req, res) => {
         },
       }
     );
-
+    res.setHeader("Cache-Control", "max-age=1800, private");
     res.status(200).json(response.data);
   } catch (err) {
     if (err instanceof Error) {
