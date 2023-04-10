@@ -3,6 +3,21 @@ const withPWA = require("next-pwa")({
   register: true,
   skipWaiting: false,
   disable: process.env.NODE_ENV === "development",
+  runtimeCaching: [
+    {
+      urlPattern: /^https:\/\/api\.spotify\.com\/.*$/,
+      handler: "CacheFirst",
+      options: {
+        cacheName: "api-cache",
+        expiration: {
+          maxAgeSeconds: 60 * 5,
+        },
+        cacheableResponse: {
+          statuses: [200],
+        },
+      },
+    },
+  ],
 });
 
 module.exports = withPWA({
