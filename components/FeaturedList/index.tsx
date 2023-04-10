@@ -29,7 +29,8 @@ const FeaturedList = () => {
       innerRef={featuredRef}
       title={
         <>
-          <span className="text-primary-main">Featured</span> Playlists.
+          Discover Your Favorite{" "}
+          <span className="text-primary-main">Playlists</span>.
         </>
       }
     >

@@ -24,9 +24,9 @@ const TextSection = ({ children }: TextSectionProps) => {
       initial="hidden"
       whileInView="visible"
       variants={textSectionVariant}
-      className="mx-10 mt-[50vh] h-[50vh]"
+      className="mt-[50vh] h-[50vh] lg:mx-80"
     >
-      <Typography type="h2" variant="heading3" className="text-center">
+      <Typography type="h2" variant="heading4" className="text-center">
         {children}
       </Typography>
     </motion.div>

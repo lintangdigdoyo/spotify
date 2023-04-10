@@ -13,7 +13,8 @@ const NewRelease = () => {
       <Section
         title={
           <>
-            <span className="text-primary-main">New</span> Release.
+            Stay up-to-date on the latest{" "}
+            <span className="text-primary-main">Releases</span>.
           </>
         }
         isSticky={false}

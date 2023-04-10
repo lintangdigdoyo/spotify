@@ -13,17 +13,20 @@ const Landing = () => {
 
       <Banner imgUrl="/images/banner.jpg">
         <Banner.Title>
-          <span className="text-primary-main">Spotify</span> dolor sit amet,
-          consectetur adipisicing elit.
+          Stream Your Favorite Music Anytime, Anywhere with{" "}
+          <span className="text-primary-main">Spotify</span>
         </Banner.Title>
         <Banner.Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cum
-          consequatur adipisci, eligendi magni praesentium ullam
+          Get instant access to millions of songs and podcasts, personalized
+          just for you.
         </Banner.Description>
-        <Banner.Button href="https://open.spotify.com">Try Now</Banner.Button>
+        <Banner.Button href="https://open.spotify.com">
+          Start Listening Now
+        </Banner.Button>
       </Banner>
       <TextSection>
-        Lorem ipsum dolor <span className="text-primary-main">sit amet</span>
+        Experience an unrivaled world of music and podcasts at your fingertips
+        with <span className="text-primary-main">Spotify</span>
       </TextSection>
       <FeaturedList />
       <GenreList />

@@ -29,8 +29,8 @@ const Subscribe = () => {
     >
       <motion.div variants={subscribeVariant}>
         <Typography variant="heading5" className="text-center">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-          sed, quibusdam eligendi distinctio at labore.
+          Start listening to your favorite music and podcasts on Spotify now.
+          Sign up for Spotify for free and start exploring today.
         </Typography>
       </motion.div>
       <motion.div variants={subscribeVariant}>
@@ -39,7 +39,7 @@ const Subscribe = () => {
           href="https://open.spotify.com"
           externalLink
         >
-          Try Now
+          Sign Up for Free
         </ButtonLink>
       </motion.div>
     </motion.div>

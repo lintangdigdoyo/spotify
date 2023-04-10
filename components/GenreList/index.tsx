@@ -33,7 +33,7 @@ const GenreList = () => {
       innerRef={genreRef}
       title={
         <>
-          <span className="text-primary-main">Genre</span> of your choice.
+          <span className="text-primary-main">Genres</span> for Every Mood.
         </>
       }
     >
