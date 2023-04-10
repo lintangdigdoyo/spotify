@@ -1,9 +1,10 @@
 import classNames from "classnames";
 import { useMotionValueEvent, useScroll } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 
 import SpotifyIcon from "assets/svg/SpotifyIcon";
+
+import Link from "../Common/Link";
 
 const Navbar = () => {
   const [isPositionOnTop, setIsPositionOnTop] = useState(true);

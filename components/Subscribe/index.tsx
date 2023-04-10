@@ -1,6 +1,6 @@
 import { motion, Variants } from "framer-motion";
 
-import Button from "components/Common/Button";
+import ButtonLink from "components/Common/Link/ButtonLink";
 import Typography from "components/Common/Typography";
 
 const subscribeVariant: Variants = {
@@ -34,7 +34,13 @@ const Subscribe = () => {
         </Typography>
       </motion.div>
       <motion.div variants={subscribeVariant}>
-        <Button variant="outlined">Try Now</Button>
+        <ButtonLink
+          variant="outlined"
+          href="https://open.spotify.com"
+          externalLink
+        >
+          Try Now
+        </ButtonLink>
       </motion.div>
     </motion.div>
   );

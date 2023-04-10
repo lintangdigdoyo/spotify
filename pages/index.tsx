@@ -20,7 +20,7 @@ const Landing = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cum
           consequatur adipisci, eligendi magni praesentium ullam
         </Banner.Description>
-        <Banner.Button>Try Now</Banner.Button>
+        <Banner.Button href="https://open.spotify.com">Try Now</Banner.Button>
       </Banner>
       <TextSection>
         Lorem ipsum dolor <span className="text-primary-main">sit amet</span>
