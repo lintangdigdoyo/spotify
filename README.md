@@ -20,8 +20,8 @@ To run this application locally, please follow these steps:
 4. Create a .env.local file and add your Spotify API client ID and client secret as follows:
 
 ```
-SPOTIFY_CLIENT_ID=YOUR_CLIENT_ID_HERE
-SPOTIFY_CLIENT_SECRET=YOUR_CLIENT_SECRET_HERE
+CLIENT_ID=YOUR_SPOTIFY_CLIENT_ID_HERE
+CLIENT_SECRET=YOUR__SPOTIFY_CLIENT_SECRET_HERE
 ```
 
 5. Run npm run dev to start the development server.
