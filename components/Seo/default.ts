@@ -4,9 +4,12 @@ export const defaultMeta = {
   description: "Spotify landing page",
   url: "https://spotify-blond-xi.vercel.app",
   type: "website",
-  robots: "follow, index",
+  robots: "index, follow",
   themeColor: "#121212",
   image: "https://spotify-blond-xi.vercel.app/meta/meta.jpg",
+  twitter: {
+    cardType: "summary_large_image",
+  },
 };
 
 export const favicons: Array<React.ComponentPropsWithoutRef<"link">> = [
@@ -26,12 +29,6 @@ export const favicons: Array<React.ComponentPropsWithoutRef<"link">> = [
     type: "image/png",
     sizes: "32x32",
     href: "/favicon/favicon-32x32.png",
-  },
-  {
-    rel: "icon",
-    type: "image/png",
-    sizes: "96x96",
-    href: "/favicon/favicon-96x96.png",
   },
   {
     rel: "manifest",
