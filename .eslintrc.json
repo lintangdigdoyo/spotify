@@ -11,6 +11,7 @@
   ],
   "plugins": ["@typescript-eslint", "unused-imports", "simple-import-sort"],
   "parser": "@typescript-eslint/parser",
+  "ignorePatterns": ["/public/*.js"],
   "rules": {
     "no-console": "warn",
     "@typescript-eslint/no-var-requires": "off",
